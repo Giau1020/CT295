@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.menu-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background-color: #0056b3;
+}
+
+.section {
+    margin-top: 1.5rem;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#cardList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#cardList li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+/* Bảng */
+/* Phong cách chung cho cả hai bảng */
+.table-style {
+    width: 100%; /* Chiều rộng full của div chứa nó */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ */
+}
+
+.table-style th, .table-style td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Kẻ khung cho từng ô */
+}
+
+.table-style th {
+    background-color: #4CAF50; /* Màu nền cho hàng tiêu đề */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-style tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Màu nền cho hàng lẻ */
+}
+
+.table-style tr:nth-child(even) {
+    background-color: #ffffff; /* Màu nền cho hàng chẵn */
+}
+
+.table-style tr:hover {
+    background-color: #e0e0e0; /* Màu nền khi hover */
+}
+
+.table-style td {
+    color: #333;
+}
+
+/* Tiêu đề */
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+

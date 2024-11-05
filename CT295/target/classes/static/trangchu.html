@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Card Management</title>
+    <link rel="stylesheet" href="style_trangchu.css">
+</head>
+<body>
+<div class="container">
+    <h1>Card Management System</h1>
+
+    <!-- Section for selecting functionality -->
+    <div class="menu">
+        <button class="menu-btn" onclick="showSection('addCard'); stop();">Add Card</button>
+        <button class="menu-btn" onclick="showSection('checkCard'); stop();">Check Card Information</button>
+        <button class="menu-btn" onclick="showSection('viewCards'); stop();">View List of Added Cards</button>
+        <button class="menu-btn" onclick="showSection('viewCardsHistory') ;stop();;  getAllCard();">Card scanning history</button>
+    </div>
+
+    <!-- Section for adding card -->
+    <div id="addCard" class="section" style="display: none;">
+        <h2>Add New Card</h2>
+        <form id="addCardForm">
+            <div class="input-group">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber"  required>
+                <div id="scanStatus" style="margin-top: 10px; color: red;"></div>
+
+                <button type="button" style="margin-top: 50px;" class="start">Scan the card</button>
+                <button type="button" style="margin-top: 50px;" class="stop">Stop</button>
+            </div>
+            <div class="input-group">
+                <label for="cardHolder">Card Holder Name:</label>
+                <input type="text" id="cardHolder" name="cardHolder" required>
+            </div>
+            <button type="submit">Add Card</button>
+        </form>
+    </div>
+
+    <!-- Section for checking card information -->
+    <div id="checkCard" class="section" style="display: none;">
+        <h2>Check Card Information</h2>
+        <form id="checkCardForm">
+            <div class="input-group">
+                <label for="checkCardNumber">Enter Card Number:</label>
+                <input type="text" id="checkCardNumber" name="checkCardNumber" required>
+                <div id="scanStatusCheck" style="margin-top: 10px; color: red;"></div>
+            </div>
+            <button type="button" class="Scan">Scan the card</button>
+            <button type="button" style="margin-top: 50px;" class="stopScan">Stop</button>
+        </form>
+        <div id="cardInfoResult"></div>
+    </div>
+
+    <!-- Section for viewing list of added cards -->
+    <div id="viewCards" class="section" style="display: none;">
+        <h2>List of Added Cards</h2>
+        <table id="cardTable" class="table-style">
+            <thead>
+            <tr>
+                <th>Card Number</th>
+                <th>Card Name</th>
+                <th>Delete Card</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Cards will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="viewCardsHistory" class="section" style="display: none;">
+        <h2>Card Scanning History</h2>
+        <input type="text" id="searchUID" style="margin-bottom: 10px;" placeholder="Enter Card Number to search" oninput="searchHistory()" />
+        <table id="cardTableHistory" class="table-style">
+            <thead>
+
+            <tr>
+                <th>Card Number</th>
+                <th>Card scanning time</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Thẻ sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- <script src="script_trangchu.js"></script> -->
+<script src="script-trangchu.js"></script>
+</body>
+</html>
